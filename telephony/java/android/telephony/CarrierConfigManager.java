@@ -4576,6 +4576,17 @@ public class CarrierConfigManager {
      * @see <a href="https://tools.ietf.org/html/rfc7296">RFC 7296, Internet Key Exchange Protocol
      *     Version 2 (IKEv2)</a>
      */
+
+     /**
+     * Flag indicating whether carrier supports multianchor conference.
+     * In multianchor conference, a participant of a conference can add
+     * other participants to the call using merge button thereby resulting
+     * in a conference with multi anchors.
+     * @hide
+     */
+    public static final String KEY_CARRIER_SUPPORTS_MULTIANCHOR_CONFERENCE =
+            "carrier_supports_multianchor_conference";
+
     public static final class Iwlan {
         /** Prefix of all Epdg.KEY_* constants. */
         public static final String KEY_PREFIX = "iwlan.";
@@ -5845,6 +5856,7 @@ public class CarrierConfigManager {
                 "53FF:mms,supl,hipri,default,fota:1xRTT:nxtgenphone",
         });
         sDefaults.putBoolean(KEY_REQUIRE_APN_FILTERING_WITH_RADIO_CAPABILITY, false);
+        sDefaults.putBoolean(KEY_CARRIER_SUPPORTS_MULTIANCHOR_CONFERENCE, false);
     }
 
     /**
