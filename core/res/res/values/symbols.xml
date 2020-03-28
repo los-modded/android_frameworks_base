@@ -4492,4 +4492,5 @@
   <java-symbol type="array" name="config_roundedCornerBottomRadiusAdjustmentArray" />
   <java-symbol type="bool" name="config_secondaryBuiltInDisplayIsRound" />
   <java-symbol type="array" name="config_builtInDisplayIsRoundArray" />
+  <java-symbol type="bool" name="config_faceAuthOnlyOnSecurityView" />
 </resources>
