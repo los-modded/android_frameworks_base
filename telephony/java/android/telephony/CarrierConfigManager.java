@@ -1948,6 +1948,12 @@ public class CarrierConfigManager {
             "carrier_nr_availabilities_int_array";
 
     /**
+     * Boolean to decide whether NR is enabled.
+     * @hide
+     */
+    public static final String KEY_NR_ENABLED_BOOL = "nr_enabled_bool";
+
+    /**
      * Boolean to decide whether LTE is enabled.
      */
     public static final String KEY_LTE_ENABLED_BOOL = "lte_enabled_bool";
@@ -5632,6 +5638,7 @@ public class CarrierConfigManager {
         sDefaults.putInt(KEY_LTE_PLUS_THRESHOLD_BANDWIDTH_KHZ_INT, 20000);
         sDefaults.putIntArray(KEY_CARRIER_NR_AVAILABILITIES_INT_ARRAY,
                 new int[]{CARRIER_NR_AVAILABILITY_NSA, CARRIER_NR_AVAILABILITY_SA});
+        sDefaults.putBoolean(KEY_NR_ENABLED_BOOL, true);
         sDefaults.putBoolean(KEY_LTE_ENABLED_BOOL, true);
         sDefaults.putBoolean(KEY_SUPPORT_TDSCDMA_BOOL, false);
         sDefaults.putStringArray(KEY_SUPPORT_TDSCDMA_ROAMING_NETWORKS_STRING_ARRAY, null);
