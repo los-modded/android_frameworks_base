@@ -677,4 +677,7 @@
         <item>@*android:string/status_bar_alarm_clock</item>
         <item>@*android:string/status_bar_call_strength</item>
     </string-array>
+
+    <!-- SystemUI Google -->
+    <bool name="flag_smartspace">true</bool>
 </resources>
