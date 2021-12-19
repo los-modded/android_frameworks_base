@@ -757,25 +757,6 @@ class MediaCarouselController @Inject constructor(
         }
 
         /* ktlint-disable max-line-length */
-        SysUiStatsLog.write(SysUiStatsLog.SMARTSPACE_CARD_REPORTED,
-                eventId,
-                instanceId,
-                // Deprecated, replaced with AiAi feature type so we don't need to create logging
-                // card type for each new feature.
-                SysUiStatsLog.SMART_SPACE_CARD_REPORTED__CARD_TYPE__UNKNOWN_CARD,
-                surface,
-                rank,
-                mediaContent.getChildCount(),
-                if (isRecommendationCard)
-                    15 // MEDIA_RECOMMENDATION
-                else
-                    31, // MEDIA_RESUME
-                uid,
-                interactedSubcardRank,
-                interactedSubcardCardinality,
-                0 // received_latency_millis
-        )
-        /* ktlint-disable max-line-length */
     }
 
     private fun onSwipeToDismiss() {
