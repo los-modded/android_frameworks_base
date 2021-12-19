@@ -426,11 +426,10 @@ public abstract class Connection extends Conferenceable {
      * Remote device supports RTT.
      * @hide
      */
-
     public static final int CAPABILITY_SUPPORTS_RTT_REMOTE = 0x20000000;
 
     //**********************************************************************************************
-    // Next CAPABILITY value: 0x30000000
+    // Next CAPABILITY value: 0x40000000
     //**********************************************************************************************
 
     /**
@@ -571,8 +570,9 @@ public abstract class Connection extends Conferenceable {
      */
     public static final int PROPERTY_IS_PARTICIPANT_HOST = 1 << 14;
 
+
     //**********************************************************************************************
-    // Next PROPERTY value: 1<<15
+    // Next PROPERTY value: 1<<14
     //**********************************************************************************************
 
     /**
@@ -789,21 +789,6 @@ public abstract class Connection extends Conferenceable {
      */
     public static final String EXTRA_REMOTE_PHONE_ACCOUNT_HANDLE =
             "android.telecom.extra.REMOTE_PHONE_ACCOUNT_HANDLE";
-
-    /**
-     * The Telecom call ID of the conference an existing connection should be added to.  This is
-     * required when {@link com.android.services.telephony.TelephonyConnectionService} adds a
-     * {@link Conference} to Telecom using the
-     * {@link ConnectionService#addExistingConnection(PhoneAccountHandle, Connection, Conference)}
-     * API.  That API specifies a parent conference associated with the new existing connection
-     * being added, and there is no equivalent as part of the {@link RemoteConnectionService} API.
-     * This extra key is used to stack the ID of the conference to which the existing connection
-     * will be added so that Telecom can link it up correctly when the {@link RemoteConference}
-     * is added to Telecom by the connection manager.
-     * @hide
-     */
-    public static final String EXTRA_ADD_TO_CONFERENCE_ID =
-            "android.telecom.extra.ADD_TO_CONFERENCE_ID";
 
     /**
      * Extra key set from a {@link ConnectionService} when using the remote connection APIs
@@ -1165,8 +1150,7 @@ public abstract class Connection extends Conferenceable {
                 == CAPABILITY_TRANSFER_CONSULTATIVE) {
             builder.append(isLong ? " CAPABILITY_TRANSFER_CONSULTATIVE" : " sup_cTrans");
         }
-        if ((capabilities & CAPABILITY_SUPPORTS_RTT_REMOTE)
-                == CAPABILITY_SUPPORTS_RTT_REMOTE) {
+        if ((capabilities & CAPABILITY_SUPPORTS_RTT_REMOTE) == CAPABILITY_SUPPORTS_RTT_REMOTE) {
             builder.append(isLong ? " CAPABILITY_SUPPORTS_RTT_REMOTE" : " sup_rtt");
         }
         builder.append("]");

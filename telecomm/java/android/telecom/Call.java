@@ -568,11 +568,11 @@ public final class Call {
          * Remote device supports RTT.
          * @hide
          */
-
         public static final int CAPABILITY_SUPPORTS_RTT_REMOTE = 0x10000000;
 
+
         //******************************************************************************************
-        // Next CAPABILITY value: 0x11000000
+        // Next CAPABILITY value: 0x20000000
         //******************************************************************************************
 
         /**
