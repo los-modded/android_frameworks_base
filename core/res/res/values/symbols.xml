@@ -4493,4 +4493,5 @@
   <java-symbol type="bool" name="config_secondaryBuiltInDisplayIsRound" />
   <java-symbol type="array" name="config_builtInDisplayIsRoundArray" />
   <java-symbol type="bool" name="config_faceAuthOnlyOnSecurityView" />
+  <java-symbol type="bool" name="config_fpCancelIfNotIdle" />
 </resources>
