@@ -715,6 +715,8 @@ public class PhoneWindowManager implements WindowManagerPolicy {
 
     private static final int MSG_DISPATCH_VOLKEY_WITH_WAKE_LOCK = 29;
 
+    private KeyEvent event;
+
     private class PolicyHandler extends Handler {
         @Override
         public void handleMessage(Message msg) {
@@ -785,10 +787,10 @@ public class PhoneWindowManager implements WindowManagerPolicy {
                     toggleTorch();
                     break;
                 case MSG_CAMERA_LONG_PRESS:
-                    KeyEvent event = (KeyEvent) msg.obj;
+                    event = (KeyEvent) msg.obj;
                     mIsLongPress = true;
                 case MSG_DISPATCH_VOLKEY_WITH_WAKE_LOCK:
-                    KeyEvent event = (KeyEvent) msg.obj;
+                    event = (KeyEvent) msg.obj;
                     dispatchMediaKeyWithWakeLockToAudioService(event);
                     dispatchMediaKeyWithWakeLockToAudioService(
                             KeyEvent.changeAction(event, KeyEvent.ACTION_UP));
